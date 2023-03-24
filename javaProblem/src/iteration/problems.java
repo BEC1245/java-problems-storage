@@ -2,9 +2,8 @@ package iteration;
 
 public class problems {
 	public static void main(String[] args) {
-		IfReit ir = new IfReit();
-		ContinueBasic cb = new ContinueBasic();
-		cb.problem5();
+		ContinueBasic ir = new ContinueBasic();
+		ir.missProblem();
 	}
 }
 
@@ -17,7 +16,6 @@ class CondOp {
         if(num1>num2) { big = num1; }
         else { big = num2; }
         System.out.println(big);
-        
         
         if(num1>num2) { diff = num1-num2; }
         else { diff = num2-num1; }
@@ -150,8 +148,21 @@ class ContinueBasic {
 			}
 		}
 	}
-	
-	// problem 13
+
+	//problem 13
+	void missProblem(){
+		for(int i = 2; i != 16; i *= 2){
+			for(int j = 1; j <= 9; j++){
+				if(i % 2 == 0 && i != 6 && i == j){
+					System.out.println(i + " * " + j + " = " + (i * j));
+					break;
+				}
+				System.out.println(i + " * " + j + " = " + (i * j));
+			}
+		}
+	}
+
+	// problem 14
 	void problem3() {
 		for(int i = 10; i <= 90; i += 10) {
 			for(int j = 10; j <= 90; j += 10) {
@@ -162,7 +173,7 @@ class ContinueBasic {
 		}
 	}
 	
-	// problem 14
+	// problem 15
 	void problem4() {
 		int n = 4;
 		if(n > 3) {
@@ -178,7 +189,7 @@ class ContinueBasic {
 		}
 	}
 	
-	// problem 15
+	// problem 16
 	void problem5() {
 		int num = 1, output = 0;
 		while(num <= 99) {

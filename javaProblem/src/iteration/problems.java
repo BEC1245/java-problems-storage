@@ -58,7 +58,7 @@ class IfReit {
 			return;
 		}
 		
-		switch((int)(num / 100) * 100) {
+		switch(num / 100) {
 			case 1 : System.out.println("100이상 200이하"); break;
 			case 2 : System.out.println("200이상 300이하"); break;
 			default : System.out.println("300이상"); break;

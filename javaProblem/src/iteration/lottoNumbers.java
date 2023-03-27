@@ -1,12 +1,10 @@
 package iteration;
 
 public class lottoNumbers {
-	
-	// this takes long time. vary long time
     public static void main(String[] args) {
         int nums[] = new int[7];
         for(int i = 0; i < nums.length; i++){
-            nums[i] = (int)(Math.random() * 43) + 1;
+            nums[i] = (int)(Math.random() * 21);
         }
 
         long attempt = 0;
@@ -14,7 +12,7 @@ public class lottoNumbers {
         while(jeckpot == false){
             attempt++;
             for(int i = 0; i < nums.length; ){
-                int random = (int)(Math.random() * 43) + 1;
+                int random = (int)(Math.random() * 21);
                 if(random != nums[i]){
                     break;
                 }
@@ -24,6 +22,10 @@ public class lottoNumbers {
             }
         }
 
+        for(var a : nums){
+            System.out.print(a +  " ");
+        }
+        System.out.println();
         System.out.println(attempt);
     }
 }

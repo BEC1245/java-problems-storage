@@ -13,8 +13,8 @@ public class P4 {
 class Member {
 	
 	void canHaveFluVaccine(int getyear) {
-		int year = 2023 - getyear - 1;
-		if(year < 13 || 65 >= year) {
+		int year = 2023 - getyear;
+		if(year <= 15 || 65 >= year) {
 			System.out.println("무료예방접종이 가능합니다");
 		}
 		else {

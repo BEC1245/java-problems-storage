@@ -16,13 +16,13 @@ public class P5 {
 }
 
 class mamber {
-	String name;
-	String phoneNumber;
-	String major;
-	int grade;
-	String email;
-	String birthday;
-	String address;
+	private String name;
+	private String phoneNumber;
+	private String major;
+	private int grade;
+	private String email;
+	private String birthday;
+	private String address;
 	
 	public mamber(String name, String phoneNumber, String major, int grade, String email, String birthday,
 			String address) {
@@ -51,6 +51,6 @@ class mamber {
 
 	void print() {
 		System.out.printf("name : %s / phoneNumber : %s / major : %s / grade : %d / email : %s / birthday : %s / address  : %s \n",
-							name, phoneNumber, major, grade, email, birthday, address);
+						   name, phoneNumber, major, grade, email, birthday, address);
 	}
 }

@@ -6,6 +6,12 @@ public class P5 {
 		mamber mb2 = new mamber("변의찬", "010-1234-1234", "none", 1000, "chanymi....");
 		mb.print();
 		mb2.print();
+		
+		dataPrint(mb);
+	}
+	
+	static void dataPrint(mamber Mamber) {
+		Mamber.print();
 	}
 }
 

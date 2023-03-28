@@ -1,6 +1,6 @@
 package first_java;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class P3 {
 
@@ -12,8 +12,8 @@ public class P3 {
 		sub(num1, num2);
 		mul(num1, num2);
 		div(num1, num2);
-		
-		System.out.println(pi(r));
+		grith(r);
+		width(r);
 	}
 
 	static void add(long num1, long num2) {
@@ -32,7 +32,11 @@ public class P3 {
 		System.out.println(num1 + "/" + num2 + "=" + (num1/num2));
 	}
 	
-	static double pi(double r) {
-		return r * Math.PI * 2;
+	static void grith(double r) {
+		System.out.println("grith is " + (r * 2 * Math.PI));
+	}
+	
+	static void width(double r) {
+		System.out.println("width is " + (Math.pow(r, 2) * Math.PI));
 	}
 }

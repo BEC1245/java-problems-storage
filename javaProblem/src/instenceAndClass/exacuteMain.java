@@ -13,12 +13,12 @@ public class exacuteMain {
 		System.out.println(ct.getPhoneNum());
 		
 		ct.print();
-		ct.setAddress("모");
-		ct.setBirthday("불");
-		ct.setEmail("아");
-		ct.setGroup("위");
-		ct.setName(null);
-		ct.setPhoneNum(null);
+		ct.setAddress("a");
+		ct.setBirthday("b");
+		ct.setEmail("c");
+		ct.setGroup("d");
+		ct.setName("e");
+		ct.setPhoneNum("f");
 		
 		ct.print();
 		

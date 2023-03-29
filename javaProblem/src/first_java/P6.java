@@ -5,86 +5,41 @@ public class P6 {
 		/* mulitdimesionArray in reference type */
 				
 		// the length of score array and name array has to be same
-		int mulitple[] = {1,2,3,4,5,6,7};
-		String mulitple2[] = {"a","b","c","d","e","f","g"};
-		student st = new student(mulitple2, mulitple, mulitple, mulitple);
+		String name[] = {"a", "b", "c", "d", "e", "f", "g"};
+		int all[] = {1,2,3,4,5,6,7};
+		int Score[][] = new int[3][];
 		
-		for(int i = 0; i < mulitple.length; i++) {
-			st.printinfo(i);
+		for(int i = 0; i < Score.length; i++) {
+			Score[i] = all;
 		}
-		System.out.println(st.all(0) + " / " + st.average(0));
+		
+		student st = new student(Score, name);
+		for(int i = 0; i < 7; i++) {
+			System.out.println(st.all(i) + " / " + st.average(i));
+		}
 	}
 }
 
 
 /* class part */
 
-
 class student {
-	private static int testStudent[] = new int[3];
-	private static int allScore[] = new int[3];
-	private int mathScore[];
-	private int scienseScore[];
-	private int languageScore[];
-	private String stName[];
+	private static int allScore[];
+	private int Score[][] = new int[3][];
+	private String name[];
+	
+	student(int Score[][], String name[]) {
+		this.Score = Score;
+		this.name = name;
 		
-	public student(String stName[], int[] mathScore, int[] scienseScore, int[] languageScore) {
-		super();
-		this.mathScore = mathScore;
-		this.scienseScore = scienseScore;
-		this.languageScore = languageScore;
-		this.stName = stName;
-		
-		addall(0, this.mathScore);
-		testStudent[0] = mathScore.length;
-		
-		addall(1, this.scienseScore);
-		testStudent[1] = scienseScore.length;
-		
-		addall(2, this.languageScore);
-		testStudent[2] = languageScore.length;
-	}
-
-	public void setStName(String[] stName) {
-		this.stName = stName;
-	}
-
-	public void setMathScore(int[] mathScore) {
-		this.mathScore = mathScore;
-		addall(0, this.mathScore);
-		testStudent[0] = mathScore.length;
+		allScore = new int[Score[0].length];
+		for(int i = 0; i < Score[0].length; i++) {
+			addall(i, this.Score);
+		}
 	}
 	
-	public void setScienseScore(int[] scienseScore) {
-		this.scienseScore = scienseScore;
-		addall(1, this.scienseScore);
-		testStudent[1] = scienseScore.length;
-	}
-	
-	public void setLanguageScore(int[] languageScore) {
-		this.languageScore = languageScore;
-		addall(2, this.languageScore);
-		testStudent[2] = languageScore.length;
-	}
-
-	public int[] getMathScore() {
-		return mathScore;
-	}
-
-	public int[] getScienseScore() {
-		return scienseScore;
-	}
-
-	public int[] getLanguageScore() {
-		return languageScore;
-	}
-	
-	public String[] getStName() {
-		return stName;
-	}
-
 	double average(int cursor) {
-		return (double)allScore[cursor] / testStudent[cursor];
+		return (double)allScore[cursor] / Score.length;
 	}
 	
 	int all(int cursor) {
@@ -92,15 +47,37 @@ class student {
 	}
 	
 	void printinfo(int cursor) {
-		System.out.println(stName[cursor] + " / " + mathScore[cursor] + " / " + scienseScore[cursor] + " / " + languageScore[cursor]);
+		System.out.println(name[cursor] + " / " + Score[0][cursor] + " / " + Score[1][cursor] + " / " + Score[2][cursor]);
 	}
 	
-	private static void addall(int cursor, int array[]) {
-		int all = 0;
-		for(var a : array) {
-			all += a;
+	private static void addall(int cursor, int array[][]) {
+		int all = 0;		
+		for(int i = 0; i < array.length; i++) {
+			all += array[i][cursor];
 		}
 		
+		System.out.println(all);
 		allScore[cursor] = all;
 	}
+
+	
+	/* getter setter */
+	
+	public int[][] getScore() {
+		return Score;
+	}
+
+	public void setScore(int[][] score) {
+		Score = score;
+	}
+
+	public String[] getName() {
+		return name;
+	}
+
+	public void setName(String[] name) {
+		this.name = name;
+	}
+	
+	
 }

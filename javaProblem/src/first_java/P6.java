@@ -2,30 +2,15 @@ package first_java;
 
 public class P6 {
 	public static void main(String[] args) {		
-		int allScore[] = {1,2,3,4,5,6,7,8,9,10,12,16,28};
-		int otherScore[] = {10,10,10,10,10,10,10};
-		student st = new student(allScore, allScore, allScore);
+		/* mulitdimesionArray in reference type */
 		
-		System.out.println(st.average(0) + " / " + st.average(1));
-		System.out.println(st.all(0) + " / " + st.all(1));
+		int mulitple[] = {1,2,3,4,5,6,7};
 		
-		st.setLanguageScore(otherScore);
-		
-		System.out.println(st.all(2) + " / " + st.average(2)); // print all and average in otherScore
-		System.out.println(st.all(3) + " / " + st.average(3)); // cursors limit <= 2 causing error
-		
-		/* 2d array part */
-		
-		int newArray[][] =  {
-				{1,2,3},
-				{12,34,56},
-				{123,456,789}
-		};
-		
-		inMulitdimansionArray imsa = new inMulitdimansionArray(newArray);
-		for(int i = 0; i < 3; i++) {
-			System.out.println(imsa.all(i) + " / " + imsa.average(i));
-		}		
+		student[] array = new student[10];
+		for(student inp : array) {
+			inp = new student(mulitple, mulitple, mulitple);
+			System.out.println(inp.all(0) + " / " + inp.average(0));
+		}
 	}
 }
 

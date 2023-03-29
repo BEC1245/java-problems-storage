@@ -47,6 +47,12 @@ class student {
 	}
 
 
+	
+	
+	public void setStName(String[] stName) {
+		this.stName = stName;
+	}
+
 	public void setMathScore(int[] mathScore) {
 		this.mathScore = mathScore;
 		addall(0, this.mathScore);
@@ -77,6 +83,10 @@ class student {
 		return languageScore;
 	}
 	
+	public String[] getStName() {
+		return stName;
+	}
+
 	double average(int cursor) {
 		if(cursor > 2) {
 			System.out.println("this is not correct input");

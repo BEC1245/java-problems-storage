@@ -3,17 +3,16 @@ package first_java;
 public class P6 {
 	public static void main(String[] args) {		
 		/* mulitdimesionArray in reference type */
-		
+				
+		// the length of score array and name array has to be same
 		int mulitple[] = {1,2,3,4,5,6,7};
 		String mulitple2[] = {"a","b","c","d","e","f","g"};
+		student st = new student(mulitple2, mulitple, mulitple, mulitple);
 		
-		student[] array = new student[10];
-		
-		int cursor = 0;
-		for(student inp : array) {
-			inp = new student(mulitple2, mulitple, mulitple, mulitple);
-			System.out.println(inp.name(cursor++) + " / " + inp.all(0) + " / " + inp.average(0));
+		for(int i = 0; i < mulitple.length; i++) {
+			st.printinfo(i);
 		}
+		System.out.println(st.all(0) + " / " + st.average(0));
 	}
 }
 
@@ -46,9 +45,6 @@ class student {
 		testStudent[2] = languageScore.length;
 	}
 
-
-	
-	
 	public void setStName(String[] stName) {
 		this.stName = stName;
 	}
@@ -88,27 +84,15 @@ class student {
 	}
 
 	double average(int cursor) {
-		if(cursor > 2) {
-			System.out.println("this is not correct input");
-			return 0;
-		}
 		return (double)allScore[cursor] / testStudent[cursor];
 	}
 	
 	int all(int cursor) {
-		if(cursor > 2) {
-			System.out.println("this is not correct input");
-			return 0;
-		}
 		return allScore[cursor];
 	}
 	
-	String name(int cursor) {
-		if(cursor >= stName.length) {
-			System.out.println("this is not correct input");
-			return "";
-		}
-		return stName[cursor];
+	void printinfo(int cursor) {
+		System.out.println(stName[cursor] + " / " + mathScore[cursor] + " / " + scienseScore[cursor] + " / " + languageScore[cursor]);
 	}
 	
 	private static void addall(int cursor, int array[]) {

@@ -12,7 +12,7 @@ public class P2 {
 	}
 }
 
-class person {
+class Human {
 	String name = "넴";
 	String phoneNumber = "넘버";
 	String residentRagistration = "레지던트";

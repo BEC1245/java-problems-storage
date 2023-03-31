@@ -15,17 +15,17 @@ public class P7 {
 class person {
 	String name;
 	String residentNumber;
-	final String birthday;
+	final String age;
 	
-	public person(String name, String residentNumber, String birthday) {
+	public person(String name, String residentNumber, String age) {
 		super();
 		this.name = name;
 		this.residentNumber = residentNumber;
-		this.birthday = birthday;
+		this.age = age;
 	}
 
 	void print() {
-		System.out.printf("안녕하세요. 저는 %s입니다. %s살 입니다", name, birthday);
+		System.out.printf("안녕하세요. 저는 %s입니다. %s살 입니다", name, age);
 	}
 }
 
@@ -39,7 +39,7 @@ class Male extends person {
 
 	@Override 
 	void print() {
-		System.out.printf("안녕하세요. 저는 %s입니다. %s살이며 남자 입니다 \n", name, birthday);
+		System.out.printf("안녕하세요. 저는 %s입니다. %s살이며 남자 입니다 \n", name, age);
 	}
 	
 	void chackDiv() {
@@ -63,7 +63,7 @@ class Female extends person {
 
 	@Override 
 	void print() {
-		System.out.printf("안녕하세요. 저는 %s입니다. %s살이며 여자 입니다 \n", name, birthday);
+		System.out.printf("안녕하세요. 저는 %s입니다. %s살이며 여자 입니다 \n", name, age);
 	}
 	
 	void chackLocation() {

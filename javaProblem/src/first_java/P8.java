@@ -26,6 +26,8 @@ abstract class Abstract implements P8 {
         System.out.println(input.substring(0, 15));
     }
 
+    public abstract double pow(long n1, long n2);
+    
     /* Override code */
 
     @Override
@@ -47,7 +49,6 @@ abstract class Abstract implements P8 {
     public long substract(long n1, long n2) {
         return n1 - n2;
     }
-
 }
 
 class Implements extends Abstract implements P8 {
@@ -60,6 +61,7 @@ class Implements extends Abstract implements P8 {
         System.out.println(divide(n1, n2));
         System.out.println(multiply(n1, n2));
         System.out.println(substract(n1, n2));
+        System.out.println(pow(n1, n2));
         usingInput();
     }
 
@@ -81,5 +83,10 @@ class Implements extends Abstract implements P8 {
     @Override
     public long substract(long n1, long n2) {
         return n1 - n2;
+    }
+    
+    @Override
+    public double pow(long n1, long n2) {
+    	return Math.pow(n1, n2);
     }
 }

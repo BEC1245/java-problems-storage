@@ -27,28 +27,6 @@ abstract class Abstract implements P8 {
     }
 
     public abstract double pow(long n1, long n2);
-    
-    /* Override code */
-
-    @Override
-    public long add(long n1, long n2) {
-        return n1 + n2;
-    }
-
-    @Override
-    public double divide(double n1, double n2) {
-        return n1 / n2;
-    }
-
-    @Override
-    public long multiply(long n1, long n2) {
-        return n1 * n2;
-    }
-
-    @Override
-    public long substract(long n1, long n2) {
-        return n1 - n2;
-    }
 }
 
 class Implements extends Abstract implements P8 {

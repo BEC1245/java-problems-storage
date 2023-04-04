@@ -27,7 +27,7 @@ class AllProblem {
 			}
 
 			for(char a : id.toCharArray()) {
-				if(!((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z'))) {
+				if(!((a >= 'a' && a <= 'z') || (a >= 'A' && a <= 'Z') ||  (a >= '0' && a <= '9'))) {
 					throw ex;
 				}
 			}

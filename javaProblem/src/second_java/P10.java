@@ -19,8 +19,8 @@ class AllProblem {
 		
 		try {
 			String id = sc.nextLine();
-			WorngInputException ex = new WorngInputException("WorngInputException in try catch 21");
-			EmptyArrayException ex2 = new EmptyArrayException("EmptyArrayException in try catch 22");
+			WorngInputException ex = new WorngInputException("WorngInputException in try catch 22");
+			EmptyArrayException ex2 = new EmptyArrayException("EmptyArrayException in try catch 23");
 			
 			if(id.trim().isEmpty()) {
 				throw ex2;

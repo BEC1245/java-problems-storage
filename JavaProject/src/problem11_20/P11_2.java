@@ -54,11 +54,34 @@ class FootballPlayer implements Comparable<FootballPlayer> {
         return "FootballPlayer [name=" + name + ", number=" + number + ", team=" + team + ", age=" + age + "]";
     }
 
+/*
+    hashset의 검색 기준을 사용하려면
+    hashCode를 사용해야하는 건 알고 있을 것이다
+
+    아래의 코드는 그 식별의 예시로
+
+    만약 “이름”과 “이름”을 넣으면
+    heshcode는 여기서 끝 문자의 유니코드 값을 반환하고
+
+    "모든" 저장된 데이터중 name의 끝 유니코드 값이 같으면 equals가 실행되는 형식이다 -> 0 이름 == 이름 / X 이름 == 이ㄹ
+    그럼 “이름.equals(o.getName)”을 자동적으로 사용하게 되고 이 둘은 똑같기에
+
+    true를 반환 / set는 같은 데이터를 저장 안 하기 때문에 add 메소드를 취소하는
+    순으로 돌아간다.
+ */
+
     @Override
     public int hashCode() {
     	return name.charAt((name.length() - 1));
     }
     
+/* set은 같은 데이터는 저장을 안하기 때문에
+ * equals가 true일 경우 저장이 안된다
+ * 
+ * 아래의 코드는 chack 이 만약 null이 아니고 FootballPlayer의 인스턴스이며
+ * 3개의 갑중 하나라도 다르다면 false로 돌아가 저장이 되는 형식이다
+ */
+
     @Override
     public boolean equals(Object obj) {
     	boolean chack = true;
@@ -71,6 +94,11 @@ class FootballPlayer implements Comparable<FootballPlayer> {
     	
     	return chack;
     }
+
+/* 아래의 코드는 저장된 모든 데이터를 대상으로 하기에
+ * 데이터를 비교하면서 만약 if안의 코드의 값이 true이고
+ * 똑같은 선상의 데이터이기 때문에 바로 리턴을 해 주면 된다 
+ */
 
     @Override
     public int compareTo(FootballPlayer o){

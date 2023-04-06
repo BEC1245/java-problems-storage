@@ -61,9 +61,9 @@ class FootballPlayer implements Comparable<FootballPlayer> {
     아래의 코드는 그 식별의 예시로
 
     만약 “이름”과 “이름”을 넣으면
-    heshcode는 여기서 끝 문자의 유니코드 값을 반환하고
+    heshcode는 여기서 끝 문자의 유니코드 값을 반환하고 -> 름의 유니코드 (47492)
 
-    "모든" 저장된 데이터중 name의 끝 유니코드 값이 같으면 equals가 실행되는 형식이다 -> 0 이름 == 이름 / X 이름 == 이ㄹ
+    "모든" 저장된 데이터중 name의 끝 유니코드 값이 같으면 equals가 실행되는 형식이다 -> 0 이"름" == 이"름" / X 이"름" == 이"ㄹ"
     그럼 “이름.equals(o.getName)”을 자동적으로 사용하게 되고 이 둘은 똑같기에
 
     true를 반환 / set는 같은 데이터를 저장 안 하기 때문에 add 메소드를 취소하는

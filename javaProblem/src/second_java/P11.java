@@ -20,7 +20,7 @@ public class P11 {
     }
 }
 
-class FootballPlayer {
+/*class FootballPlayer {
     String name;
     int number;
     String team;
@@ -54,7 +54,7 @@ class FootballPlayer {
     public int getAge() {
         return age;
     }
-}
+}*/
 
 class Func {
     Stack<FootballPlayer> FBP = new Stack<>(); // nomal save
